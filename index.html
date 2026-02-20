@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Alexander Strauss – Senior IT System Engineer (60%) mit Development-DNA. Infrastruktur, Architektur, Enterprise Applications, Automation." />
+  <meta name="robots" content="index,follow" />
+  <title>Alexander Strauss | Senior IT System Engineer (60%) mit Development-DNA</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Alexander Strauss – Senior IT System Engineer (60%)" />
+  <meta property="og:description" content="Infrastructure · Architecture · Enterprise Applications · Automation (mit Development-DNA)" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg: #0b1220;
+      --bg2:#0f1b33;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.70);
+      --muted2: rgba(255,255,255,.56);
+      --border: rgba(255,255,255,.12);
+      --accent: #38bdf8;
+      --accent2:#7c5cff;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1120px;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: var(--sans);
+      color: var(--text);
+      background:
+        radial-gradient(800px 500px at 15% 10%, rgba(56,189,248,.18), transparent 60%),
+        radial-gradient(700px 500px at 85% 15%, rgba(124,92,255,.18), transparent 60%),
+        radial-gradient(900px 650px at 50% 110%, rgba(56,189,248,.10), transparent 60%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
+      line-height: 1.55;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width: var(--max); margin: 0 auto; padding: 26px 18px 70px;}
+    header{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding: 10px 0 14px;
+    }
+    .brand{display:flex; align-items:center; gap:12px;}
+    .dot{
+      width:12px;height:12px;border-radius:999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(56,189,248,.12);
+    }
+    .brand strong{font-size:14px; letter-spacing:.2px}
+    .brand .sub{font-size:12px; color: var(--muted2)}
+    .nav{
+      display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;
+      font-size: 13px; color: var(--muted);
+    }
+    .nav a{
+      padding:8px 10px; border-radius: 999px; border:1px solid transparent;
+    }
+    .nav a:hover{border-color: var(--border); background: rgba(255,255,255,.04)}
+    .hero{
+      border:1px solid var(--border);
+      border-radius: calc(var(--radius) + 8px);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .hero::before{
+      content:"";
+      position:absolute; inset:-2px;
+      background:
+        radial-gradient(560px 260px at 15% 0%, rgba(56,189,248,.20), transparent 65%),
+        radial-gradient(520px 300px at 85% 10%, rgba(124,92,255,.16), transparent 60%);
+      pointer-events:none;
+      filter: blur(1px);
+    }
+    .hero-inner{
+      position:relative;
+      padding: 26px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 16px;
+    }
+    @media (max-width: 860px){ .hero-inner{grid-template-columns:1fr} }
+    h1{margin:0 0 8px; font-size: 36px; line-height:1.1}
+    .title{margin:0 0 10px; color: var(--muted); font-size: 15px}
+    .lead{margin:0 0 14px; color: var(--muted); font-size: 14px}
+    .badges{display:flex; flex-wrap:wrap; gap:10px; margin: 12px 0 14px}
+    .badge{
+      font-size: 12px; color: var(--muted);
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      padding: 8px 10px; border-radius: 999px;
+    }
+    .cta{display:flex; flex-wrap:wrap; gap:10px; margin-top: 10px}
+    .btn{
+      display:inline-flex; align-items:center; gap:10px;
+      padding: 10px 12px; border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      font-size: 13px; color: var(--text);
+      transition: transform .12s ease, background .12s ease;
+    }
+    .btn.primary{
+      border-color: rgba(56,189,248,.50);
+      background: linear-gradient(135deg, rgba(56,189,248,.22), rgba(124,92,255,.14));
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.06)}
+    .side{
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.04);
+      padding: 16px;
+    }
+    .side h3{margin:0 0 10px; font-size: 14px; letter-spacing:.2px}
+    .kv{display:grid; grid-template-columns: 140px 1fr; gap:8px 10px; font-size: 13px}
+    .k{color: var(--muted2)}
+    .v{color: var(--text)}
+    .divider{height:1px; background: var(--border); margin: 12px 0}
+    main{
+      margin-top: 16px;
+      display:grid; grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    @media (max-width: 860px){ main{grid-template-columns:1fr} }
+    section{
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.04);
+      padding: 18px;
+    }
+    section h2{margin:0 0 10px; font-size: 16px}
+    .small{font-size:12px; color: var(--muted2)}
+    .pillrow{display:flex; flex-wrap:wrap; gap:8px; margin-top: 10px}
+    .pill{
+      font-size: 12px; color: var(--text);
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      padding: 6px 10px; border-radius: 999px;
+    }
+    .role{
+      display:flex; justify-content:space-between; gap: 12px; flex-wrap:wrap;
+      align-items:baseline; margin: 10px 0 6px;
+    }
+    .role strong{font-size: 14px}
+    .meta{font-size: 12px; color: var(--muted2); font-family: var(--mono)}
+    ul{margin: 8px 0 0; padding-left: 18px; color: var(--muted)}
+    li{margin: 6px 0; font-size: 13px}
+    .stack{
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.6;
+      word-break: break-word;
+    }
+    footer{margin-top: 14px; color: var(--muted2); font-size: 12px; text-align:center}
+    @media print{
+      body{background:#fff; color:#000}
+      .hero,section{box-shadow:none; background:#fff}
+      .nav,.btn{display:none}
+      :root{--border: rgba(0,0,0,.18)}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <div>
+          <strong>Alexander Strauss</strong><br/>
+          <span class="sub">Senior IT System Engineer (60%) · Hybrid · Schweiz</span>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Navigation">
+        <a href="#profil">Profil</a>
+        <a href="#kompetenz">Kompetenzen</a>
+        <a href="#erfahrung">Erfahrung</a>
+        <a href="#stack">Stack</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </header>
+
+    <div class="hero" id="top">
+      <div class="hero-inner">
+        <div>
+          <h1>Alexander Strauss</h1>
+          <p class="title"><strong>Senior IT System Engineer (60%)</strong> mit Development-DNA</p>
+
+          <p class="lead">
+            Ich unterstütze KMU und Enterprise-Organisationen beim stabilen Betrieb und der nachhaltigen Weiterentwicklung
+            komplexer IT-Infrastrukturen. Ich verbinde Infrastruktur, Applikation und Automatisierung ganzheitlich –
+            vom Betriebssystem bis zur Datenbank und Code-Ebene.
+          </p>
+
+          <div class="badges">
+            <span class="badge">Verfügbarkeit: 60%</span>
+            <span class="badge">Hybrid</span>
+            <span class="badge">KMU & Enterprise</span>
+            <span class="badge">Windows · Linux · Databases · Siebel CRM</span>
+          </div>
+
+          <div class="cta">
+            <!-- Optional: CV-PDF Link eintragen -->
+            <a class="btn primary" href="assets/CV_Alexander_Strauss.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+            <a class="btn" href="mailto:astrauss66@outlook.de">astrauss66@outlook.de</a>
+            <a class="btn" href="tel:+41794238334">079 423 83 34</a>
+          </div>
+
+          <div class="divider"></div>
+          <p class="small">Diese Seite ist bewusst kompakt und scanbar für Recruiter & Hiring Manager.</p>
+        </div>
+
+        <aside class="side" aria-label="Profil-Schnellinfos">
+          <h3>Auf einen Blick</h3>
+          <div class="kv">
+            <div class="k">Standort</div><div class="v">Steffisburg, Schweiz</div>
+            <div class="k">Pensum</div><div class="v">60% (fix) · planbar</div>
+            <div class="k">Arbeitsmodell</div><div class="v">Hybrid</div>
+            <div class="k">Umfeld</div><div class="v">KMU & Enterprise</div>
+            <div class="k">Schwerpunkte</div><div class="v">Betrieb · Architektur · Automation</div>
+          </div>
+          <div class="divider"></div>
+          <p class="small">
+            <strong>Hybrid-Profil</strong><br/>
+            Betriebssicher, architektonisch denkend und entwicklungsnah – ideal für Umgebungen, in denen
+            Infrastruktur und Applikationen zusammen gedacht werden müssen.
+          </p>
+        </aside>
+      </div>
+    </div>
+
+    <main>
+      <section id="profil">
+        <h2>Profil</h2>
+        <p class="small">
+          Senior IT System Engineer mit über 25 Jahren Erfahrung im Aufbau, Betrieb und der Weiterentwicklung komplexer IT-Infrastrukturen.
+          Fundierte Expertise in Windows- und Linux-Serverlandschaften, Virtualisierung, Datenbanken (Oracle, MS SQL, DB2) sowie
+          Enterprise-Anwendungen (Siebel CRM). Dank langjähriger Softwareentwicklungserfahrung (u. a. C++, Python, Visual Basic, PHP)
+          verbinde ich Infrastruktur, Applikationsbetrieb und Automatisierung effizient und nachhaltig.
+        </p>
+
+        <div class="pillrow" aria-label="Profil-Highlights">
+          <span class="pill">Betrieb & Troubleshooting</span>
+          <span class="pill">Architektur & Planung</span>
+          <span class="pill">Automation (Bash/Python)</span>
+          <span class="pill">Enterprise- & KMU-Erfahrung</span>
+          <span class="pill">Datenbanken</span>
+        </div>
+      </section>
+
+      <section id="kompetenz">
+        <h2>Kompetenzen</h2>
+        <p class="small"><strong>Infrastructure & Operations</strong><br/>
+          Windows Server Administration | Linux Server Administration | Microsoft 365 / Exchange |
+          Virtualisierung (VMware, VirtualBox, Vagrant) | Netzwerk- & System Monitoring | Backup- und Datensicherheitskonzepte
+        </p>
+        <p class="small"><strong>Enterprise Applications</strong><br/>
+          Siebel CRM (Enterprise Betrieb) | Webserver (LAMP, WAMP, IIS, Apache, Nginx) | Nextcloud | CAD-Systeme | GIS-Systeme
+        </p>
+        <p class="small"><strong>Databases</strong><br/>
+          Oracle | MS SQL Server | MySQL | PostgreSQL | DB2
+        </p>
+        <p class="small"><strong>Development & Automation</strong><br/>
+          C++ | Python | Visual Basic | PHP | Bash / Shell Scripting | Perl
+        </p>
+      </section>
+
+      <section id="erfahrung">
+        <h2>Ausgewählte Erfahrung</h2>
+
+        <div class="role">
+          <strong>IT Verantwortlicher · Architektur Jürg Gasser</strong>
+          <span class="meta">12/2020 – 06/2025</span>
+        </div>
+        <ul>
+          <li>Gesamtverantwortung für IT-Infrastruktur eines KMU</li>
+          <li>Betrieb & Wartung: Windows Clients, CAD-Systeme, Exchange, Microsoft 365</li>
+          <li>Webserver-Betrieb (LAMP) und Nextcloud</li>
+          <li>Architektur- & Infrastrukturplanung, Datensicherheit & Backup-Strategien</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <div class="role">
+          <strong>System Engineer · Die Mobiliar</strong>
+          <span class="meta">09/2019 – 11/2020</span>
+        </div>
+        <ul>
+          <li>Betrieb & Support von Siebel CRM (VP / Mobi24) im Enterprise-Umfeld</li>
+          <li>7x24 Pikett, Störungsanalyse & Behebung (Linux-Serverlandschaften)</li>
+          <li>Automation via Bash- und Python-Skripte</li>
+          <li>Wartung von OS, Datenbank und Umsystemen; Monitoring</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <div class="role">
+          <strong>IT Verantwortlicher / Softwareentwickler · Universität Bern</strong>
+          <span class="meta">07/2006 – 08/2019</span>
+        </div>
+        <ul>
+          <li>Aufbau & Betrieb von Server- und Client-Infrastruktur; Virtualisierung & Netzwerk</li>
+          <li>Datenbanken, ArcGIS/QGIS; Monitoring von Server- & Netzwerkumgebungen</li>
+          <li>Entwicklung von Web-Applikationen (LAMP/WAMP) und wissenschaftlichen Anwendungen</li>
+        </ul>
+      </section>
+
+      <section id="stack">
+        <h2>Technology Stack</h2>
+        <p class="small">Keyword-Block (auch hilfreich für Suche & ATS):</p>
+        <div class="stack">
+          Windows Server | Linux | Oracle | MS SQL | MySQL | PostgreSQL | DB2 | VMware | VirtualBox |
+          Microsoft 365 | Exchange | Siebel CRM | Python | C++ | PHP | Bash | LAMP | WAMP | IIS |
+          Apache | Nginx | ArcGIS | Splunk | Docker | Virtualisierung | Netzwerkadministration | System Monitoring
+        </div>
+
+        <div class="divider"></div>
+        <p class="small">
+          <strong>Weiterbildung (Auszug):</strong><br/>
+          Mobiliar: Siebel CRM, Splunk, Docker, Liima, EAI/EIM · IBM: AIX/DB2/AS-400/RS-6000 · SGI: IRIX & 3D Visualization
+        </p>
+      </section>
+
+      <section id="kontakt">
+        <h2>Kontakt</h2>
+        <p class="small">
+          Am besten erreichbar per E-Mail. Verfügbarkeit: <strong>60%</strong> · <strong>Hybrid</strong> · Schweiz.
+        </p>
+        <div class="cta" style="margin-top:10px">
+          <a class="btn primary" href="mailto:astrauss66@outlook.de">astrauss66@outlook.de</a>
+          <a class="btn" href="tel:+41794238334">079 423 83 34</a>
+        </div>
+        <div class="divider"></div>
+        <p class="small">© <span id="y"></span> Alexander Strauss · Keine Tracking-Cookies</p>
+      </section>
+    </main>
+
+    <footer>
+      Tipp: Hinterlege diese URL als QR-Code im Bewerbungsdossier. Optional kannst du zusätzlich dein CV-PDF unter <span class="small" style="font-family:var(--mono)">/assets/</span> verlinken.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
