@@ -1,622 +1,272 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
-	<head>
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<title>Alexander Strauss | Senior IT System Engineer (60%)</title>
-		<meta name="description" content="Alexander Strauss – Senior IT System Engineer (60%). Enterprise Infrastructure, Operations & Automation mit Development-DNA. Schweiz, Hybrid."/>
-		<meta name="robots" content="index,follow"/>
-		<!-- Open Graph / Twitter -->
-		<meta property="og:title" content="Alexander Strauss | Senior IT System Engineer (60%)"/>
-		<meta property="og:description" content="Enterprise Infrastructure • Operations • Automation. Stabiler 7x24-Betrieb, Architekturdenken & Automatisierung."/>
-		<meta property="og:type" content="website"/>
-		<meta name="twitter:card" content="summary"/>
-		<style>
-    :root{
-      /* McKinsey‑inspiriertes Light Theme: ruhig, editorial, viel Weißraum */
-      --bg: #f6f7f9;
-      --surface: #ffffff;
-      --surface-2: #fbfcfe;
-      --text: #111827;
-      --muted: #4b5563;
-      --muted-2:#6b7280;
-      --border: #e5e7eb;
-      --accent: #0b3a66;     /* seriöses Navy */
-      --accent-2:#1f5a8a;    /* dezenter Hover */
-      --shadow: 0 8px 20px rgba(17,24,39,.06);
-      --shadow-soft: 0 2px 8px rgba(17,24,39,.05);
-      --radius: 14px;
-      --max: 1100px;
-      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
-    }
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alexander Strauss – Full-Stack System- & Software-Entwickler</title>
+<meta name="description" content="Alexander Strauss – Full-Stack System- & Software-Entwickler. Systemnahe C++/SDK-Entwicklung, Web & Datenbanken (LAMP), angewandte KI, CAD/3D. Langjährige Erfahrung. 60%, remote DACH & Schweiz.">
+<style>
+  :root{
+    color-scheme: dark;
+    --bg:#0e1116; --bg-soft:#161b22; --card:#1a2029; --line:#2a323d;
+    --text:#e6edf3; --muted:#9aa7b4; --accent:#4ea1ff; --accent-2:#7ee0c0;
+    --radius:14px; --maxw:960px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  header.hero{padding:70px 0 40px;border-bottom:1px solid var(--line);
+    background:radial-gradient(1100px 340px at 15% -10%, rgba(78,161,255,.14), transparent 60%);}
+  .hero-flex{display:flex;align-items:center;gap:32px}
+  .hero-text{min-width:0}
+  .hero-photo{width:158px;height:158px;border-radius:50%;object-fit:cover;flex-shrink:0;
+    border:3px solid var(--accent);box-shadow:0 8px 24px rgba(0,0,0,.4)}
+  @media(max-width:640px){
+    .hero-flex{flex-direction:column;text-align:center;gap:22px}
+    .hero-photo{width:132px;height:132px}
+    .hero-text .cta{justify-content:center}
+  }
+  .avail{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;font-weight:600;
+    color:var(--accent-2);background:rgba(126,224,192,.12);border:1px solid rgba(126,224,192,.3);
+    padding:5px 12px;border-radius:999px;letter-spacing:.02em}
+  .avail .dot{width:8px;height:8px;border-radius:50%;background:var(--accent-2);box-shadow:0 0 0 3px rgba(126,224,192,.25)}
+  h1{font-size:clamp(1.9rem,5vw,2.9rem);margin:16px 0 6px;letter-spacing:-.02em;line-height:1.12}
+  .tagline{font-size:clamp(1.02rem,2.4vw,1.28rem);color:var(--muted);font-weight:500;margin:0 0 22px}
+  .tagline b{color:var(--text);font-weight:600}
+  .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+  .btn{display:inline-block;padding:11px 18px;border-radius:10px;font-weight:600;font-size:.95rem}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{text-decoration:none;filter:brightness(1.07)}
+  .btn-ghost{border:1px solid var(--line);color:var(--text)}
+  .btn-ghost:hover{text-decoration:none;border-color:var(--accent)}
+  section{padding:48px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:1.4rem;margin:0 0 6px;letter-spacing:-.01em}
+  .sec-sub{color:var(--muted);margin:0 0 26px;font-size:.98rem}
+  .grid{display:grid;gap:18px}
+  .grid-3{grid-template-columns:repeat(3,1fr)}
+  .grid-2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:760px){.grid-3,.grid-2{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .card h3{margin:0 0 8px;font-size:1.08rem;display:flex;align-items:center;gap:10px}
+  .card .ico{font-size:1.15rem}
+  .card p{margin:0 0 12px;color:var(--muted);font-size:.94rem}
+  .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}
+  .tag{font-size:.76rem;color:var(--text);background:var(--bg-soft);border:1px solid var(--line);
+    padding:4px 9px;border-radius:7px}
+  .skillcol h4{margin:0 0 10px;font-size:.9rem;text-transform:uppercase;letter-spacing:.06em;color:var(--accent)}
+  .skillcol ul{margin:0;padding-left:18px;color:var(--muted);font-size:.92rem}
+  .skillcol li{margin:4px 0}
+  .exp{display:flex;gap:16px;padding:16px 0;border-top:1px solid var(--line)}
+  .exp:first-of-type{border-top:none}
+  .exp .when{min-width:130px;color:var(--muted);font-size:.86rem;font-variant-numeric:tabular-nums}
+  .exp .what h3{margin:0 0 3px;font-size:1.02rem}
+  .exp .what p{margin:0;color:var(--muted);font-size:.92rem}
+  .meta{display:flex;flex-wrap:wrap;gap:26px;color:var(--muted);font-size:.94rem}
+  .meta b{color:var(--text);font-weight:600}
+  footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:.9rem}
+  .contact-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:14px}
+  .contact-row a,.contact-row span{color:var(--text)}
+</style>
+</head>
+<body>
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:var(--sans);
-      color:var(--text);
-      background: var(--bg);
-      line-height:1.6;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-rendering: optimizeLegibility;
-    }
+<header class="hero">
+  <div class="wrap hero-flex">
+    <img class="hero-photo" src="assets/Mein_neues_Profil_Foto.jpeg" alt="Porträt von Alexander Strauss">
+    <div class="hero-text">
+      <span class="avail"><span class="dot"></span>Verfügbar · 60 % · ab sofort</span>
+      <h1>Alexander Strauss</h1>
+      <p class="tagline"><b>Full-Stack System- &amp; Software-Entwickler</b> – von der Systemebene bis zur fertigen Anwendung.<br>
+      Systemnahe C++/SDK-Entwicklung · Web &amp; Datenbanken · Angewandte KI · Langjährige Erfahrung</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="mailto:astrauss66@outlook.de">Kontakt aufnehmen</a>
+        <a class="btn btn-ghost" href="#leistungen">Leistungen ansehen</a>
+      </div>
+    </div>
+  </div>
+</header>
 
-    a{color:inherit; text-decoration:none}
-    a:focus-visible, button:focus-visible{
-      outline: 3px solid rgba(11,58,102,.18);
-      outline-offset: 2px;
-      border-radius: 10px;
-    }
+<section id="ueber">
+  <div class="wrap">
+    <h2>Über mich</h2>
+    <p class="sec-sub">Vertikale Tiefe statt nur einer Schicht.</p>
+    <p style="max-width:720px;color:var(--muted);font-size:1rem;margin:0;text-align:justify;hyphens:auto;-webkit-hyphens:auto">
+      Als langjähriger Full-Stack-Entwickler decke ich die gesamte vertikale Tiefe ab – vom Betriebssystem
+      und der Datenbank über Treiber, DLLs und Backend bis zur fertigen Anwendung. Mein Kern ist die
+      <b style="color:var(--text)">systemnahe C++-Entwicklung</b> und die saubere Integration von Hardware und SDKs.
+      Dazu kommen datenbankgetriebene Web-Anwendungen auf einem tiefen LAMP-Stack sowie der produktive Einsatz
+      von generativer KI. Aus vielen Jahren im 7×24-Betrieb bringe ich die Perspektive mit, die zählt:
+      Ich baue Lösungen, die sich nicht nur programmieren, sondern auch betreiben und warten lassen.
+    </p>
+    <p style="max-width:720px;color:var(--muted);font-size:1rem;margin:16px 0 0;text-align:justify;hyphens:auto;-webkit-hyphens:auto">
+      Eine Besonderheit: Ich bin zusätzlich <b style="color:var(--text)">ausgebildeter Hochbauzeichner</b> und zu Hause in CAD,
+      Blender und 3D-Visualisierung. Damit verbinde ich zwei Welten, die selten zusammenkommen –
+      <b style="color:var(--text)">Architektur/Planung und Software-Entwicklung</b>. Genau daraus entstehen Lösungen wie
+      parametrische CAD-Automation oder interaktive 3D-Visualisierung im Browser.
+    </p>
+  </div>
+</section>
 
-    .wrap{max-width:var(--max); margin:0 auto; padding:26px 18px 72px}
-
-    header{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:14px; padding:6px 0 18px;
-    }
-
-    .brand{display:flex; align-items:center; gap:12px}
-    .dot{
-      width:10px; height:10px; border-radius:999px;
-      background: var(--accent);
-      box-shadow: 0 0 0 4px rgba(11,58,102,.10);
-    }
-    .brand strong{font-size:14px; letter-spacing:.2px}
-    .brand .sub{font-size:12px; color:var(--muted-2)}
-
-    .nav{
-      display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;
-      font-size:13px; color:var(--muted);
-    }
-    .nav a{
-      padding:8px 10px;
-      border-radius:999px;
-      border:1px solid transparent;
-      transition: background .12s ease, border-color .12s ease, color .12s ease;
-    }
-    .nav a:hover{
-      border-color:var(--border);
-      background: rgba(17,24,39,.03);
-      color: var(--text);
-    }
-
-    /* HERO */
-    .hero{
-      border:1px solid var(--border);
-      border-radius: calc(var(--radius) + 6px);
-      background: var(--surface);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-    }
-    .hero-inner{
-      padding:28px;
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:18px;
-    }
-    @media (max-width: 860px){ .hero-inner{grid-template-columns:1fr; padding:22px} }
-
-    h1{
-      margin:0 0 10px;
-      font-size:34px;
-      line-height:1.12;
-      letter-spacing: -.2px;
-    }
-    .title{margin:0 0 10px; color:var(--muted); font-size:15px}
-    .lead{margin:0 0 14px; color:var(--muted); font-size:14px}
-
-    /* Badges dezenter, „less UI“ */
-    .badges{display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 14px}
-    .badge{
-      font-size:12px;
-      color:var(--muted);
-      border:1px solid var(--border);
-      background: var(--surface-2);
-      padding:7px 10px;
-      border-radius:999px;
-    }
-
-    .cta{display:flex; flex-wrap:wrap; gap:10px; margin-top:10px}
-
-    .btn{
-      display:inline-flex; align-items:center; gap:10px;
-      padding:10px 12px;
-      border-radius:12px;
-      border: 1px solid var(--border);
-      background: var(--surface);
-      font-size:13px;
-      color: var(--text);
-      transition: transform .12s ease, background .12s ease, border-color .12s ease, box-shadow .12s ease;
-    }
-    .btn.primary{
-      border-color: rgba(11,58,102,.35);
-      background: var(--accent);
-      color: #ffffff;
-      box-shadow: 0 6px 14px rgba(11,58,102,.18);
-    }
-    .btn:hover{
-      transform: translateY(-1px);
-      background: rgba(17,24,39,.02);
-      border-color: rgba(17,24,39,.18);
-      box-shadow: var(--shadow-soft);
-    }
-    .btn.primary:hover{
-      background: var(--accent-2);
-      border-color: rgba(11,58,102,.45);
-      box-shadow: 0 10px 18px rgba(11,58,102,.20);
-    }
-
-    .side{
-      border:1px solid var(--border);
-      border-radius: var(--radius);
-      background: var(--surface-2);
-      padding:16px;
-    }
-    .side h2{margin:0 0 10px; font-size:14px; letter-spacing:.2px}
-    .kv{display:grid; grid-template-columns: 140px 1fr; gap:8px 10px; font-size:13px}
-    .k{color:var(--muted)}
-    .divider{height:1px; background:var(--border); margin:14px 0}
-
-    main{margin-top:16px; display:grid; grid-template-columns:1fr 1fr; gap:14px}
-    @media (max-width: 860px){ main{grid-template-columns:1fr} }
-
-    section{
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      background: var(--surface);
-      box-shadow: var(--shadow-soft);
-      padding:18px;
-    }
-    section h2{margin:0 0 10px; font-size:16px; letter-spacing:.1px}
-
-    .small{font-size:12.5px; color:var(--muted)}
-    .pillrow{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
-    .pill{
-      font-size:12px;
-      border:1px solid var(--border);
-      background: var(--surface-2);
-      padding:6px 10px;
-      border-radius:999px;
-      color: var(--muted);
-    }
-
-    .role{
-      display:flex; justify-content:space-between; gap:12px;
-      flex-wrap:wrap; align-items:baseline; margin:10px 0 6px;
-    }
-    .role strong{font-size:14px}
-    .meta{font-size:12px; color:var(--muted-2); font-family:var(--mono)}
-
-    ul{margin:8px 0 0; padding-left:18px; color:var(--muted)}
-    li{margin:6px 0; font-size:13px}
-
-    .stack{
-      font-family:var(--mono);
-      font-size:12px;
-      color:var(--muted);
-      line-height:1.65;
-      word-break:break-word
-    }
-
-    footer{margin-top:14px; color:var(--muted-2); font-size:12px; text-align:center}
-
-    @media print{
-      body{background:#fff}
-      .nav,.btn{display:none}
-      section,.hero{box-shadow:none}
-    }
-      /* Theme Toggle */
-    .theme-toggle{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:8px 10px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background: var(--surface);
-      font-size:13px;
-      color: var(--muted);
-      cursor:pointer;
-      transition: background .12s ease, border-color .12s ease, color .12s ease, transform .12s ease, box-shadow .12s ease;
-    }
-    .theme-toggle:hover{
-      transform: translateY(-1px);
-      background: rgba(17,24,39,.02);
-      border-color: rgba(17,24,39,.18);
-      color: var(--text);
-      box-shadow: var(--shadow-soft);
-    }
-    .theme-icon{font-size:14px; line-height:1}
-    .theme-label{font-size:13px}
-
-    /* Dark Theme (optional) */
-    html[data-theme="dark"]{
-      --bg: #0b1220;
-      --surface: #0f172a;
-      --surface-2: #111c33;
-      --text: #e5e7eb;
-      --muted: #b0b7c3;
-      --muted-2:#94a3b8;
-      --border: #22304a;
-      --accent: #7aa7ff;
-      --accent-2:#96bcff;
-      --shadow: 0 10px 28px rgba(0,0,0,.35);
-      --shadow-soft: 0 4px 14px rgba(0,0,0,.28);
-    }
-
-    html[data-theme="dark"] .nav a:hover{
-      border-color: rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      color: var(--text);
-    }
-    html[data-theme="dark"] .btn{
-      background: var(--surface);
-      border-color: rgba(255,255,255,.12);
-    }
-    html[data-theme="dark"] .btn:hover{
-      background: rgba(255,255,255,.06);
-      border-color: rgba(255,255,255,.18);
-    }
-    html[data-theme="dark"] .btn.primary{
-      background: var(--accent);
-      color:#06101e;
-      border-color: rgba(122,167,255,.55);
-      box-shadow: 0 10px 20px rgba(122,167,255,.14);
-    }
-    html[data-theme="dark"] .btn.primary:hover{
-      background: var(--accent-2);
-      border-color: rgba(150,188,255,.65);
-      box-shadow: 0 14px 24px rgba(122,167,255,.18);
-    }
-    html[data-theme="dark"] .theme-toggle{
-      background: var(--surface);
-      border-color: rgba(255,255,255,.12);
-      color: var(--muted);
-    }
-    html[data-theme="dark"] .theme-toggle:hover{
-      background: rgba(255,255,255,.06);
-      border-color: rgba(255,255,255,.18);
-      color: var(--text);
-    }
-	.projects-hero{
-  margin-top:14px;
-}
-
-.projects-hero h3{
-  margin:0 0 6px;
-  font-size:13px;
-  letter-spacing:.3px;
-  color:var(--muted);
-}
-
-.projectlist{
-  list-style:none;
-  padding:0;
-  margin:0;
-}
-
-.projectlist li{
-  font-size:13px;
-  margin:6px 0;
-}
-
-.projectlist strong{
-  font-weight:600;
-}
-
-.projectlist span{
-  display:block;
-  font-size:12px;
-  color:var(--muted-2);
-}
-
-.profile-img{
-  width: 100%;
-  max-width: 160px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 14px;
-  border: 2px solid var(--border);
-  box-shadow: var(--shadow-soft);
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-
-.profile-img:hover{
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 12px 24px rgba(17,24,39,.12);
-}
-  </style>
-	</head>
-	<body>
-		<div class="wrap">
-			<header>
-				<div class="brand">
-					<span class="dot" aria-hidden="true"></span>
-					<div>
-						<strong>Alexander Strauss</strong>
-						<br/>
-						<span class="sub">Senior IT System Engineer (60 %) · Hybrid · Schweiz</span>
-					</div>
-				</div>
-				<nav class="nav" aria-label="Navigation">
-					<a href="#profil">Profil</a>
-					<a href="#kompetenz">Kompetenzen</a>
-					<a href="#erfahrung">Erfahrung</a>
-					<a href="#stack">Stack</a>
-					<a href="#kontakt">Kontakt</a>
-					<button class="theme-toggle" type="button" aria-label="Theme umschalten" aria-pressed="false">
-						<span class="theme-icon" aria-hidden="true">☾</span>
-						<span class="theme-label">Dark</span>
-					</button>
-				</nav>
-			</header>
-			<div class="hero">
-				<div class="hero-inner">
-					<div>
-						<h1>ENTERPRISE INFRASTRUCTURE • OPERATIONS • AUTOMATION</h1>
-						<p class="title">
-							<strong>Senior IT System Engineer (60 %)</strong> – stabiler 7x24-Betrieb, Architekturdenken & Automatisierung (Development-DNA)</p>
-						<p class="lead">
-            Ich unterstütze Enterprise-Organisationen und anspruchsvolle KMU im stabilen, sicheren und effizienten Betrieb komplexer IT-Systemlandschaften.
-            Fokus: Hochverfügbarkeit, Produktionsbetrieb, Incident/Problem-Handling und nachhaltige Automatisierung mit Python & Bash.
-          </p>
-						<div class="badges">
-							<span class="badge">Pensum: 60 %</span>
-							<span class="badge">Hybrid</span>
-							<span class="badge">Schweiz</span>
-							<span class="badge">Windows · Linux · Databases · Siebel CRM</span>
-						</div>
-						<!-- NEU HIER EINFÜGEN -->
-						<div class="divider"></div>
-						<div class="projects-hero">
-							<h3>SELECTED ENGINEERING PROJECTS</h3>
-							<ul class="projectlist">
-								<li>
-									<strong>VR Client for Flight Simulation</strong>
-									<span>C++ · SimConnect · VR integration</span>
-								</li>
-								<li>
-									<strong>License Management System</strong>
-									<span>Client/Server · Encryption · Validation</span>
-								</li>
-								<li>
-									<strong>C++ Control DLLs</strong>
-									<span>3D model control for simulation platforms</span>
-								</li>
-								<li>
-									<strong>Virtual Planetarium</strong>
-									<span>Three.js · WebGL · Private Observatory (Beta)</span>
-								</li>
-								<li>
-									<strong>Parametrische Planung</strong>
-									<span>CAD-Workflows automatisieren</span>
-								</li>
-							</ul>
-						</div>
-						<div class="divider"></div>
-						<!-- ENDE NEU -->
-<div class="cta">
-							<!-- Optional: CV-PDF Link eintragen -->
-							<a class="btn primary" href="assets/CV_Alexander_Strauss_Senior_IT_System_Engineer.pdf" target="_blank" rel="noopener">CV (PDF)</a>
-							<a class="btn" href="mailto:astrauss66@outlook.de">E-Mail</a>
-							<a class="btn" href="tel:+41794238334">Telefon</a>
-							<a class="btn" href="https://www.linkedin.com/in/alexander-strauss-4405a3160" target="_blank" rel="noopener">LinkedIn</a>
-						</div>
-						<div class="divider"></div>
-						<p class="small">Hinweis: Diese Seite ist bewusst kompakt und scanbar für Recruiter & Hiring Manager.</p>
-					</div>
-					<aside class="side">
-						<h2>AUF EINEN BLICK</h2>
-						<img src="assets/Mein_neues_Profil_Foto.jpeg" alt="Alexander Strauss Profilbild" class="profile-img">
-						<div class="kv">							
-							<div class="k">Standort</div>
-							<div>Steffisburg, Schweiz</div>
-							<div class="k">Pensum</div>
-							<div>60% (planbar)</div>
-							<div class="k">Arbeitsmodell</div>
-							<div>Hybrid</div>
-							<div class="k">Umfeld</div>
-							<div>Enterprise & anspruchsvolle KMU</div>
-							<div class="k">Schwerpunkte</div>
-							<div>Operations · Architektur · Automation</div>
-						</div>
-						<div class="divider"></div>
-						<p class="small">
-							<strong>HYBRID-PROFIL</strong>
-							<br/>
-            Betriebssicher, architektonisch denkend und entwicklungsnah – ideal, wenn Infrastruktur und Applikationen zusammen gedacht werden müssen.
-          </p>
-					</aside>
-				</div>
-			</div>
-			<main>
-				<section id="profil">
-					<h2>PROFIL</h2>
-					<p class="small">
-         Senior IT System Engineer mit über 25 Jahren Erfahrung im Betrieb, in der Stabilisierung und in der Weiterentwicklung komplexer IT- und Enterprise-Infrastrukturen.
-Spezialisiert auf hochverfügbare Produktionsumgebungen, 7×24-Betrieb, Incident- und Problem-Management sowie die nachhaltige Automatisierung betrieblicher Abläufe.
-Fundierte Erfahrung in Windows- und Linux-Serverlandschaften, relationalen Datenbanken wie Oracle, MS SQL Server, PostgreSQL und DB2 sowie im Betrieb von Enterprise-Anwendungen, insbesondere Siebel CRM.
-Praxisstarke Development-DNA mit Fokus auf Automatisierung und Betriebsoptimierung durch Python und Bash sowie zusätzlicher Erfahrung in C++, PHP und Visual Basic.
-Ergänzt wird das technische Profil durch langjährige Praxis im Architektur- und CAD-Umfeld, wodurch Planungs-, CAD- und Fachapplikationen sowohl systemseitig als auch fachlich fundiert verstanden werden.
-        </p>
-					<p class="small">
-          Meine Arbeitsweise ist geprägt durch strukturierte Analyse, hohe Betriebsverantwortung, ruhiges Vorgehen in Störungssituationen und einen klaren Fokus auf stabile, sichere und nachhaltige Produktionssysteme.
-        </p>
-					<div class="pillrow">
-						<span class="pill">7x24 Production Ops</span>
-						<span class="pill">High Availability</span>
-						<span class="pill">Incident & Problem Mgmt</span>
-						<span class="pill">Automation (Python/Bash)</span>
-						<span class="pill">Databases</span>
-					</div>
-				</section>
-				<section id="kompetenz">
-					<h2>KOMPETENZEN</h2>
-					<p class="small">
-						<strong>Enterprise Infrastructure & Operations</strong>
-						<br/>
-          Windows Server | Linux | VMware | Microsoft 365 / Exchange | Monitoring | Backup & Disaster Recovery | Hochverfügbarkeit
-        </p>
-					<p class="small">
-						<strong>Enterprise Applications & Databases</strong>
-						<br/>
-          Siebel CRM | Oracle | MS SQL | DB2 | PostgreSQL | Webserver (LAMP/WAMP/IIS) | Apache | Nginx
-        </p>
-					<p class="small">
-						<strong>Automation & Development</strong>
-						<br/>
-          Python | Bash / Shell | C++ | PHP | Visual Basic | COBOL | Prozessautomatisierung | Betriebsoptimierung
-        </p>
-				</section>
-				<section id="automation">
-					<h2>AUTOMATION & ENGINEERING APPROACH</h2>
-					<p class="small">
-            In komplexen Systemlandschaften ist Stabilität kein Zufall, sondern Ergebnis strukturierter Automatisierung.
-            Ein Schwerpunkt meiner Arbeit liegt in der Reduktion manueller Betriebsprozesse durch gezielte Skript- und Monitoringlösungen.
-            Ergänzend beschäftige ich mich mit AI-gestützter Prozessoptimierung und dem strukturierten Einsatz von Large Language Models 
-            zur Effizienzsteigerung technischer Analyse- und Dokumentationsprozesse.
-          </p>
-					<div class="divider"></div>
-					<p class="small">
-						<strong>Deployment & Operational Automation (Bash)</strong>
-						<br>
-            Entwicklung von Bash-Skripten zur Standardisierung von Deployment-Prozessen.
-            Automatisierte Rollouts und Konfigurationsanpassungen in Linux-Umgebungen.
-            Ziel: Reproduzierbare Abläufe und Minimierung manueller Eingriffe im Produktionsbetrieb.
-          </p>
-						<p class="small">
-							<strong>Monitoring & Observability (Python)</strong>
-							<br>
-            Entwicklung von Python-Skripten zur Prozess- und Systemüberwachung.
-            Übergabe strukturierter Metriken an Monitoring-Systeme mit Visualisierung und Alerting über Grafana.
-            Ziel: Früherkennung von Störungen und Erhöhung der Systemverfügbarkeit.
-          </p>
-							<div class="pillrow">
-								<span class="pill">Automation first</span>
-								<span class="pill">Observability by design</span>
-								<span class="pill">Reproducible deployments</span>
-							</div>
-						</section>
-						<section id="erfahrung">
-							<h2>SELECTED EXPERIENCE</h2>
-
-							<div class="role">
-								<strong>IT-Verantwortlicher & Hochbauzeichner · Architektur Jürg Gasser</strong>
-								<span class="meta">12/2020 – 06/2025</span>
-							</div>
-							<ul>
-								<li>Konzeption, Betrieb und Weiterentwicklung einer stabilen IT-Umgebung zur Sicherstellung eines reibungslosen CAD- und Planungsbetriebs. </li>
-								<li>Implementierung strukturierter Backup- und Datensicherungskonzepte zur Reduktion betrieblicher Risiken und zur Absicherung geschäftskritischer Daten. </li>
-								<li>Optimierung und Absicherung der Web- und Server-Infrastruktur im LAMP-Umfeld zur Erhöhung von Stabilität, Sicherheit und Verfügbarkeit. </li>
-								<li>Sicherstellung des zuverlässigen Betriebs von Microsoft 365- und Exchange-Diensten für den operativen Geschäftsbetrieb. </li>
-								<li>Verbindung von technischem Infrastrukturverständnis mit fachlicher Erfahrung im Architektur- und CAD-Umfeld. </li>
-							</ul>
-							<div class="divider"></div>
-							
-							<div class="role">
-								<strong>System Engineer · Die Mobiliar</strong>
-								<span class="meta">09/2019 – 11/2020</span>
-							</div>
-							<ul>
-								<li>Sicherstellung des stabilen 7×24-Betriebs der Enterprise-CRM-Plattform Siebel CRM in einer produktiven Unternehmensumgebung. </li>
-								<li>Analyse, Priorisierung und nachhaltige Behebung komplexer Störungen in Linux-basierten Serverlandschaften. </li>
-								<li>Automatisierung wiederkehrender Betriebsaufgaben mit Python und Bash zur Reduktion manueller Eingriffe und zur Erhöhung der Betriebseffizienz. </li>
-								<li>Verbesserung der Systemstabilität durch proaktives Monitoring, strukturierte Fehleranalyse und nachhaltige Problemlösung im Produktionsbetrieb. </li>
-								<li>Mitarbeit im anspruchsvollen Enterprise-Umfeld mit Fokus auf Verfügbarkeit, Stabilität und kontrollierte Betriebsprozesse. </li>
-							</ul>
-							<div class="divider"></div>
-							
-							<div class="role">
-								<strong>IT Verantwortlicher / Softwareentwickler · Universität Bern</strong>
-								<span class="meta">07/2006 – 08/2019</span>
-							</div>
-							<ul>
-								<li>Konzeption, Aufbau, Betrieb und Weiterentwicklung von Server- und Client-Infrastrukturen zur Unterstützung wissenschaftlicher Projekte und operativer Anforderungen. </li>
-								<li>Sicherstellung stabiler Datenbank-, Server- und GIS-Umgebungen in produktiven Forschungs- und Arbeitskontexten.</li>
-								<li>Entwicklung, Wartung und Optimierung webbasierter Anwendungen zur Unterstützung interner Prozesse und fachlicher Anforderungen. </li>
-								<li>Einführung und Etablierung von Monitoring-Mechanismen zur Verbesserung von Betriebsstabilität, Datensicherheit und Systemtransparenz. </li>
-								<li>Verbindung von Infrastrukturverantwortung, Applikationsbetrieb und softwareseitiger Weiterentwicklung in einem heterogenen technischen Umfeld. </li>
-							</ul>
-						</section>
-						<section id="education">
-							<h2>EDUCATION & TRAINING</h2>
-							<div class="role">
-								<strong>ChatGPT Prompt Engineering | Advanced Data Analysis | Trustworthy Generative AI | Technische Auffrischung in IBM Linux-Systemverwaltung, IBM Power Systems, Linux / Private Cloud und IBM AIX</strong>
-								<span class="meta">in progress, 2026</span>
-							</div>
-							<ul>
-								<li>Weiterbildung und technische Auffrischung in Large Language Models, Advanced Data Analysis, Linux-Systemadministration, IBM Power Systems, Private Cloud und IBM AIX im Kontext von Betrieb, Automatisierung und Infrastrukturmanagement.</li>
-							</ul>
-						</section>
-						<section id="stack">
-							<h2>TECHNICAL STACK</h2>
-							<p class="small">Keyword-Block (Recruiter Search & SEO):</p>
-							<div class="stack">
-          Windows Server | Linux | Oracle | MS SQL | PostgreSQL | DB2 | VMware | Microsoft 365 | Siebel CRM | Python | C++ | PHP | Bash | Visual Basic | COBOL | LAMP | IIS | Apache | Nginx | Monitoring | Disaster Recovery | Virtualisierung | Netzwerkadministration | CAD
+<section id="leistungen">
+  <div class="wrap">
+    <h2>Leistungen</h2>
+    <p class="sec-sub">Vier Standbeine – einzeln oder kombiniert einsetzbar.</p>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3><span class="ico">⚙️</span>Systemnahe Entwicklung</h3>
+        <p>Performante, stabile Software nah an Betriebssystem und Hardware – inklusive sauberer Anbindung an bestehende Systeme.</p>
+        <div class="tags">
+          <span class="tag">C++</span><span class="tag">Win32/API</span><span class="tag">DLL</span>
+          <span class="tag">Multithreading</span><span class="tag">Verschlüsselung</span>
+          <span class="tag">Client/Server</span><span class="tag">SDK-Integration</span><span class="tag">SimConnect</span>
         </div>
-							<div class="divider"></div>
-							<p class="small">
-								<strong>Weiterbildung (Auszug):</strong> Oracle · IBM AIX/DB2/AS-400 · SGI IRIX · Splunk · Docker</p>
-						</section>
-						<section id="kontakt">
-							<h2>KONTAKT</h2>
-							<p class="small">
-          Pensum: <strong>60 %</strong> · <strong>Hybrid</strong> · Schweiz. Am besten erreichbar per E-Mail.
-        </p>
-							<div class="cta" style="margin-top:10px">
-								<a class="btn primary" href="mailto:astrauss66@outlook.de">astrauss66@outlook.de</a>
-								<a class="btn" href="tel:+41794238334">079 423 83 34</a>
-								<a class="btn" href="https://www.linkedin.com/in/alexander-strauss-4405a3160" target="_blank" rel="noopener">LinkedIn</a>
-							</div>
-							<div class="divider"></div>
-							<p class="small">© <span id="y"></span> Alexander Strauss · Keine Tracking-Cookies</p>
-						</section>
-					</main>
-					<footer>
-      
-    </footer>
-				</div>
-				<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
-				<script>
-    (function(){
-      const KEY = "theme";
-      const root = document.documentElement;
-      const btn = document.querySelector(".theme-toggle");
-      const icon = btn?.querySelector(".theme-icon");
-      const label = btn?.querySelector(".theme-label");
+      </div>
+      <div class="card">
+        <h3><span class="ico">🌐</span>Web &amp; Datenbanken</h3>
+        <p>Von der Datenbankmodellierung über das Backend bis zur interaktiven Oberfläche – inklusive Serverbetrieb und Deployment.</p>
+        <div class="tags">
+          <span class="tag">PHP</span><span class="tag">Python/Flask</span><span class="tag">MySQL</span>
+          <span class="tag">PostgreSQL</span><span class="tag">LAMP</span><span class="tag">Three.js/WebGL</span>
+          <span class="tag">HTML/CSS</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3><span class="ico">🤖</span>Angewandte &amp; generative KI</h3>
+        <p>Praktische Integration von KI in bestehende Abläufe – für Automatisierung, Prototyping und generative Inhalte.</p>
+        <div class="tags">
+          <span class="tag">Prompt Engineering</span><span class="tag">Generative AI</span>
+          <span class="tag">RAG</span><span class="tag">Agentic AI</span><span class="tag">LangChain</span>
+          <span class="tag">LangGraph</span><span class="tag">MCP</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3><span class="ico">📐</span>CAD, 3D &amp; Visualisierung</h3>
+        <p>Ausgebildeter Hochbauzeichner: CAD, 3D-Modellierung, Visualisierung und Animation – die Brücke zwischen Architektur/Planung und Software.</p>
+        <div class="tags">
+          <span class="tag">Hochbauzeichnen</span><span class="tag">CAD</span><span class="tag">Blender</span>
+          <span class="tag">3D-Modellierung</span><span class="tag">Visualisierung</span>
+          <span class="tag">Animation</span><span class="tag">Parametrik</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      function setTheme(theme){
-        if(theme === "dark"){
-          root.setAttribute("data-theme","dark");
-          localStorage.setItem(KEY,"dark");
-          if(icon) icon.textContent = "☀";
-          if(label) label.textContent = "Light";
-          if(btn) btn.setAttribute("aria-pressed","true");
-        } else {
-          root.removeAttribute("data-theme"); // light default
-          localStorage.setItem(KEY,"light");
-          if(icon) icon.textContent = "☾";
-          if(label) label.textContent = "Dark";
-          if(btn) btn.setAttribute("aria-pressed","false");
-        }
-      }
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills &amp; Technologien</h2>
+    <p class="sec-sub">Nach Reifegrad geordnet.</p>
+    <div class="grid grid-3">
+      <div class="skillcol">
+        <h4>Produktiv / sehr gut</h4>
+        <ul>
+          <li>C++, Python, Bash, PHP</li>
+          <li>Win32/API &amp; DLL-Entwicklung</li>
+          <li>LAMP-Stack (OS → Deployment)</li>
+          <li>MySQL, PostgreSQL</li>
+          <li>CAD, Blender, 3D &amp; Visualisierung</li>
+          <li>Linux- &amp; Windows-Betrieb</li>
+        </ul>
+      </div>
+      <div class="skillcol">
+        <h4>Im Einsatz / gut</h4>
+        <ul>
+          <li>Flask, HTML/CSS</li>
+          <li>Three.js / WebGL</li>
+          <li>VMware, Microsoft 365</li>
+          <li>Monitoring, Backup/DR</li>
+          <li>Prompt Engineering, Generative AI</li>
+        </ul>
+      </div>
+      <div class="skillcol">
+        <h4>Im Aufbau</h4>
+        <ul>
+          <li>RAG-Architekturen</li>
+          <li>Agentic AI</li>
+          <li>LangChain, LangGraph</li>
+          <li>MCP</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-      // Init
-      const saved = localStorage.getItem(KEY);
-      if(saved === "dark") setTheme("dark");
-      else setTheme("light");
+<section id="projekte">
+  <div class="wrap">
+    <h2>Ausgewählte Projekte</h2>
+    <p class="sec-sub">Zeigt die Bandbreite von systemnah bis Web.</p>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>License Management</h3>
+        <p>Client/Server-Lizenzverwaltung mit Verschlüsselung.</p>
+        <div class="tags"><span class="tag">C++</span><span class="tag">Client/Server</span><span class="tag">Crypto</span></div>
+      </div>
+      <div class="card">
+        <h3>Virtual Planetarium</h3>
+        <p>Interaktive 3D-Sternenhimmel-Visualisierung im Browser.</p>
+        <div class="tags"><span class="tag">Three.js</span><span class="tag">WebGL</span><span class="tag">JavaScript</span></div>
+      </div>
+      <div class="card">
+        <h3>Parzio – CAD-Automation</h3>
+        <p>Automatisierung parametrischer Planungsprozesse. <em>(in Entwicklung)</em></p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Automation</span><span class="tag">CAD</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      btn?.addEventListener("click", function(){
-        const isDark = root.getAttribute("data-theme") === "dark";
-        setTheme(isDark ? "light" : "dark");
-      });
-    })();
-  </script>
+<section id="erfahrung">
+  <div class="wrap">
+    <h2>Berufserfahrung</h2>
+    <p class="sec-sub">Langjährige Praxis in Entwicklung, Datenbanken und Systembetrieb.</p>
+    <div class="exp">
+      <div class="when">12/2020 – 06/2025</div>
+      <div class="what"><h3>Architektur Jürg Gasser</h3>
+        <p>IT-Verantwortung, CAD-Infrastruktur, Optimierung des LAMP-Stacks.</p></div>
+    </div>
+    <div class="exp">
+      <div class="when">09/2019 – 11/2020</div>
+      <div class="what"><h3>Die Mobiliar</h3>
+        <p>Betrieb Siebel CRM, Automatisierung mit Python/Bash.</p></div>
+    </div>
+    <div class="exp">
+      <div class="when">07/2006 – 08/2019</div>
+      <div class="what"><h3>Universität Bern</h3>
+        <p>Infrastruktur, Datenbanken und Web-Anwendungen.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="eckdaten">
+  <div class="wrap">
+    <h2>Eckdaten</h2>
+    <p class="sec-sub">&nbsp;</p>
+    <div class="meta">
+      <div><b>Verfügbarkeit</b><br>60 %, ab sofort</div>
+      <div><b>Arbeitsform</b><br>Remote (DACH) &amp; lokal CH</div>
+      <div><b>Ausbildung</b><br>Diplom Informatik · Zeichner EFZ Architektur</div>
+      <div><b>Sprachen</b><br>Deutsch (Muttersprache), Englisch (technisch)</div>
+      <div><b>Standort</b><br>Steffisburg, Schweiz</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="contact-row">
+      <a href="mailto:astrauss66@outlook.de">astrauss66@outlook.de</a>
+      <span>·</span>
+      <a href="tel:+41794238334">+41 79 423 83 34</a>
+      <span>·</span>
+      <a href="https://www.linkedin.com/in/alexander-strauss-4405a3160" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div>© 2026 Alexander Strauss · Steffisburg, Schweiz</div>
+  </div>
+</footer>
+
 </body>
 </html>
-
-
-
-
-
